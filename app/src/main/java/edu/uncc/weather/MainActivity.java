@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements CitiesFragment.CitiesFragmentListener {
+public class MainActivity extends AppCompatActivity implements CitiesFragment.CitiesFragmentListener, CurrentWeatherFragment.CurrentWeatherFragmentListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,14 @@ public class MainActivity extends AppCompatActivity implements CitiesFragment.Ci
     public void gotoCurrentWeather(DataService.City city) {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.rootView, CurrentWeatherFragment.newInstance(city))
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void gotoWeatherForeCast(DataService.City city) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.rootView, WeatherForecastFragment.newInstance(city))
                 .addToBackStack(null)
                 .commit();
     }

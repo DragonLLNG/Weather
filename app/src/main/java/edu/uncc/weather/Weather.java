@@ -1,88 +1,168 @@
 package edu.uncc.weather;
 
+import java.util.ArrayList;
+
 public class Weather {
-    private double temperature, max_temp, min_temp, wind_speed, wind_degree;
-    private int humidity, cloudiness;
-    private String description;
+    //Coordinate coord;
+    ArrayList<Weathers> weather;
+    //String base;
+    Main main;
+    //int visibility;
+    Wind wind;
+    //Rain rain;
+    Cloud clouds;
+    //int dt;
+    //Sys sys;
+    //int timezone, id, name, cod;
 
     public Weather(){
 
     }
-
-    public Weather(double temperature, double max_temp, double min_temp,
-                   String description, int humidity, double wind_speed,
-                   double wind_degree, int cloudiness){
-        this.temperature = temperature;
-        this.max_temp = max_temp;
-        this.min_temp = min_temp;
-        this.description = description;
-        this.humidity = humidity;
-        this.wind_speed = wind_speed;
-        this.wind_degree = wind_degree;
-        this.cloudiness = cloudiness;
+    public Weather( ArrayList<Weathers> weather,Main main,
+                   Wind wind, Cloud clouds){
+        //this.coord = coord;
+        this.weather = weather;
+        //this.base = base;
+        this.main = main;
+        //this.visibility = visibility;
+        this.wind = wind;
+        this.clouds = clouds;
+        //this.dt = dt;
+        //this.sys = sys;
+        //this.timezone = timezone;
+        //this.id = id;
+        //this.name = name;
+        //this.cod = cod;
     }
 
-    public double getTemperature() {
-        return temperature;
+    /*
+    public void setCoord(Coordinate coord) {
+        this.coord = coord;
     }
 
-    public double getMax_temp() {
-        return max_temp;
+     */
+
+    public void setWeather(ArrayList<Weathers> weather) {
+        this.weather = weather;
     }
 
-    public double getMin_temp() {
-        return min_temp;
+    /*
+    public void setBase(String base) {
+        this.base = base;
     }
 
-    public String getDescription() {
-        return description;
+     */
+
+    public void setMain(Main main) {
+        this.main = main;
     }
 
-    public int getHumidity() {
-        return humidity;
+    /*
+    public void setVisibility(int visibility) {
+        this.visibility = visibility;
+    }
+     */
+
+    public void setWind(Wind wind) {
+        this.wind = wind;
     }
 
-    public double getWind_speed() {
-        return wind_speed;
+    public void setClouds(Cloud clouds) {
+        this.clouds = clouds;
     }
 
-    public double getWind_degree() {
-        return wind_degree;
+/*
+    public void setDt(int dt) {
+        this.dt = dt;
     }
 
-    public int getCloudiness() {
-        return cloudiness;
+    public void setSys(Sys sys) {
+        this.sys = sys;
     }
 
-    public void setTemperature(double temperature) {
-        this.temperature = temperature;
+    public void setTimezone(int timezone) {
+        this.timezone = timezone;
     }
 
-    public void setMax_temp(double max_temp) {
-        this.max_temp = max_temp;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setMin_temp(double min_temp) {
-        this.min_temp = min_temp;
+    public void setName(int name) {
+        this.name = name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCod(int cod) {
+        this.cod = cod;
     }
 
-    public void setHumidity(int humidity) {
-        this.humidity = humidity;
+    public Coordinate getCoord() {
+        return coord;
     }
 
-    public void setWind_speed(double wind_speed) {
-        this.wind_speed = wind_speed;
+ */
+
+    public ArrayList<Weathers> getWeather() {
+        return weather;
     }
 
-    public void setWind_degree(double wind_degree) {
-        this.wind_degree = wind_degree;
+    /*
+    public String getBase() {
+        return base;
     }
 
-    public void setCloudiness(int cloudiness) {
-        this.cloudiness = cloudiness;
+     */
+
+    public Main getMain() {
+        return main;
     }
+
+
+    /*
+    public int getVisibility() {
+        return visibility;
+    }
+
+     */
+
+    public Wind getWind() {
+        return wind;
+    }
+
+    public Cloud getClouds() {
+        return clouds;
+    }
+
+    /*
+    public int getDt() {
+        return dt;
+    }
+
+    public Sys getSys() {
+        return sys;
+    }
+
+    public int getTimezone() {
+        return timezone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getName() {
+        return name;
+    }
+
+    public int getCod() {
+        return cod;
+    }
+
+    private class Rain {
+
+        double h;
+    }
+
+     */
+
 }
